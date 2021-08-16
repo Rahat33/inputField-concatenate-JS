@@ -35,28 +35,28 @@
 
     <script>
 
-        // third button
-        document.getElementById('addBoth').addEventListener('click', function () {
-            console.log(document.getElementById('firstInput').value + document.getElementById('secondInput').value)
-        })
 
         // first button
         document.getElementById('firstButton').addEventListener('click', function () {
             const firstText = document.getElementById('firstInput');
             console.log(firstText.value);
-            firstText.value = '';
+            return firstText;
+
         })
 
         // second button
         document.getElementById('secondButton').addEventListener('click', function () {
             const secondText = document.getElementById('secondInput');
             console.log(secondText.value);
-            secondText.value = '';
+            return secondText;
+
         })
 
         // third button
         document.getElementById('addBoth').addEventListener('click', function () {
-            console.log(document.getElementById('firstInput').value)
+            console.log(document.getElementById('firstInput').value + ' ' + document.getElementById('secondInput').value);
+            document.getElementById('firstInput').value = '';
+            document.getElementById('secondInput').value = '';
         })
     </script>
 </body>
