@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Concatenate</title>
+</head>
+
+<body>
+    <header>
+        <h1>collecting text and Adding Togather</h1>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <textarea name="" id="firstInput" cols="80" rows="4"></textarea>
+                <br style="margin-bottom: 20px;">
+                <button id="firstButton" style="margin-bottom: 20px;">Add First</button>
+            </div>
+
+            <div>
+                <textarea name="" id="secondInput" cols="80" rows="4"></textarea>
+                <br style="margin-bottom: 20px;">
+                <button id="secondButton" style="margin-bottom: 20px;">Add Second</button>
+            </div>
+
+            <div>
+                <button id="addBoth">Add Both Comment</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+
+        // third button
+        document.getElementById('addBoth').addEventListener('click', function () {
+            console.log(document.getElementById('firstInput').value + document.getElementById('secondInput').value)
+        })
+
+        // first button
+        document.getElementById('firstButton').addEventListener('click', function () {
+            const firstText = document.getElementById('firstInput');
+            console.log(firstText.value);
+            firstText.value = '';
+        })
+
+        // second button
+        document.getElementById('secondButton').addEventListener('click', function () {
+            const secondText = document.getElementById('secondInput');
+            console.log(secondText.value);
+            secondText.value = '';
+        })
+
+        // third button
+        document.getElementById('addBoth').addEventListener('click', function () {
+            console.log(document.getElementById('firstInput').value)
+        })
+    </script>
+</body>
+
+</html>
